@@ -44,18 +44,17 @@ class Landing extends Component {
     // Not my artwork -> https://blog.kadenze.com/creative-technology/p5-js-crash-course-recreate-art-you-love/
     const maxCircleSize = 40, numRows = 10, numCols = 50, numStrands = 2; 
     let colorA, colorB; 
-    let phase = 0, speed = 0.015; 
-    let canvas;
+    let phase = 0, speed = 0.015;
   
       p.setup = () => {
-        canvas = p.createCanvas(p.windowWidth, p.windowHeight);
+        p.createCanvas(p.windowWidth, p.windowHeight);
         p.noStroke();
-        colorA = p.color(253, 174, 120);
-        colorB = p.color(226, 129, 161);
+        colorA = p.color(139, 207, 200);
+        colorB = p.color(0, 150, 136);
       }
   
       p.draw = () => {
-        p.background(4, 58, 74);
+        p.background(24, 40, 54);
         phase = p.frameCount * speed;
         
         for(let strand = 0; strand < numStrands; strand += 1) {
