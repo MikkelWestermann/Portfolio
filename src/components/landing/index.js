@@ -1,9 +1,45 @@
 import React, { Component } from 'react'; 
 
+import { 
+  watchViewport, 
+  unwatchViewport
+} from 'tornis';
+
 // import p5 wrapper for background sketch
 import P5Wrapper from 'react-p5-wrapper';
 
 class Landing extends Component {
+
+  state = {
+    windowSize: {
+      x: 0,
+      y: 0
+    }
+  }
+
+  componentWillMount() {
+    watchViewport(this.tornis)
+  }
+
+
+  tornis = ({ size, scroll, mouse }) => {
+    if (size.changed) {
+      console.log('Size ->', size)
+      const windowSize = { ...this.state.windowSize }
+      windowSize.x = size.x; 
+      windowSize.y = size.y; 
+      this.setState({ windowSize })
+    }
+    
+    if (scroll.changed) {
+      console.log('Scroll ->', scroll)
+    }
+
+    if (mouse.changed) {
+      console.log('Mouse ->', mouse)
+    }
+  }
+
   sketch = p => {
     // Not my artwork -> https://blog.kadenze.com/creative-technology/p5-js-crash-course-recreate-art-you-love/
     const maxCircleSize = 20, numRows = 10, numCols = 25, numStrands = 2; 
@@ -40,7 +76,7 @@ class Landing extends Component {
           }
         }
       }
-  
+
       p.myCustomRedrawAccordingToNewPropsHandler = (newProps) => {
         if(canvas) //Make sure the canvas has been created
           p.fill(newProps.color)
