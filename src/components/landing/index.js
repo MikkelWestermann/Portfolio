@@ -26,7 +26,7 @@ class Landing extends Component {
   }  
 
 
-  tornis = ({ size, scroll, mouse }) => {
+  tornis = ({ size, scroll }) => {
     if (size.changed) {
       console.log('Size ->', size)
       const windowSize = { ...this.state.windowSize }
@@ -38,21 +38,17 @@ class Landing extends Component {
     if (scroll.changed) {
       console.log('Scroll ->', scroll)
     }
-
-    if (mouse.changed) {
-      console.log('Mouse ->', mouse)
-    }
   }
 
   sketch = p => {
     // Not my artwork -> https://blog.kadenze.com/creative-technology/p5-js-crash-course-recreate-art-you-love/
-    const maxCircleSize = 20, numRows = 10, numCols = 25, numStrands = 2; 
+    const maxCircleSize = 40, numRows = 10, numCols = 50, numStrands = 2; 
     let colorA, colorB; 
-    let phase = 0, speed = 0.02; 
+    let phase = 0, speed = 0.015; 
     let canvas;
   
       p.setup = () => {
-        canvas = p.createCanvas(500, 500);
+        canvas = p.createCanvas(p.windowWidth, p.windowHeight);
         p.noStroke();
         colorA = p.color(253, 174, 120);
         colorB = p.color(226, 129, 161);
@@ -79,6 +75,10 @@ class Landing extends Component {
             }
           }
         }
+      }
+
+      p.windowResized = () => {
+        p.resizeCanvas(p.windowWidth, p.windowHeight)
       }
   }
   render() {
