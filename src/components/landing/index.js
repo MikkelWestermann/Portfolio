@@ -21,6 +21,10 @@ class Landing extends Component {
     watchViewport(this.tornis)
   }
 
+  componentWillUnmount() {
+    unwatchViewport(this.tornis)
+  }  
+
 
   tornis = ({ size, scroll, mouse }) => {
     if (size.changed) {
