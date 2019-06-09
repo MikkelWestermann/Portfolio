@@ -6,8 +6,10 @@
     "antd": "^3.19.2",
     "lax.js": "^1.2.3",
     "node-sass": "^4.12.0",
+    "p5": "^0.8.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-p5-wrapper": "^2.0.0",
     "react-router-dom": "^5.0.0",
     "react-scripts": "3.0.1",
     "tornis": "^0.1.3"
