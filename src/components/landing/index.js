@@ -8,6 +8,9 @@ import {
 // import p5 wrapper for background sketch
 import P5Wrapper from 'react-p5-wrapper';
 
+// import styles 
+import './styles.scss'
+
 class Landing extends Component {
 
   state = {
@@ -83,9 +86,9 @@ class Landing extends Component {
   }
   render() {
     return (
-      <div style={{backgroundColor: 'rgb(24, 40, 54)', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+      <div id='landing-anim'>
         <P5Wrapper sketch={this.sketch}></P5Wrapper>
-        <h1>Hello World!</h1>
+        <h1>Hi, I'm Mikkel Westermann</h1>
       </div>
     )
   }
