@@ -120,7 +120,7 @@ class Landing extends Component {
         <div id='landing-anim-actions'>
           <div>
             <Button>Download My Resume</Button>
-            <Button>View My Work -></Button>
+            <Button type='primary'>View My Work -></Button>
           </div>
           {
             !pauseAnim ?
