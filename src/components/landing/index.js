@@ -57,17 +57,9 @@ class Landing extends Component {
     let colorA, colorB; 
     let phase = 0, speed = 0.015;
     const maxWindowWidth = 1200; 
-  
-      p.setup = () => {
-        p.createCanvas(p.windowWidth < maxWindowWidth ? p.windowWidth : maxWindowWidth, p.windowHeight);
-        p.noStroke();
-        colorA = p.color(238);
-        colorB = p.color(0, 150, 136);
-      }
-  
-      p.draw = () => {
-        if (!this.state.pauseAnim) {
-          p.background(24, 40, 54);
+
+    const drawFrame = () => {
+      p.background(24, 40, 54);
           phase = p.frameCount * speed;
           
           for(let strand = 0; strand < numStrands; strand++) {
@@ -87,6 +79,18 @@ class Landing extends Component {
               }
             }
           }
+    }
+  
+      p.setup = () => {
+        p.createCanvas(p.windowWidth < maxWindowWidth ? p.windowWidth : maxWindowWidth, p.windowHeight);
+        p.noStroke();
+        colorA = p.color(238);
+        colorB = p.color(0, 150, 136);
+      }
+  
+      p.draw = () => {
+        if (!this.state.pauseAnim) {
+          drawFrame()
         }
       }
 
