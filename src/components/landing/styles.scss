@@ -1,32 +1,56 @@
+$white: #eee; 
+$green: #009688;
+$text-color: #192937;
 #landing-anim {
   @keyframes fadeIn {
     0% {
       opacity: 0;
     }
-    25% {
+    50% {
       opacity: 0;
     }
     100% {
       opacity: 1;
     }
   }
-  background-color: rgb(25, 41, 55);
+  background-color: $text-color;
   display: flex; 
   flex-direction: column; 
   align-items: center;
   
   #landing-anim-me {
-    animation: 2s linear fadeIn; 
+    animation: 1s linear fadeIn; 
     position: absolute; 
     top: 20vh;
     text-align: center;
 
     h1, h2 {
-      color: #eee;
+      color: $white;
       font-size: 3em; 
       span {
-        color: rgb(0, 150, 136);
+        color: $green;
         font-weight: bold; 
+      }
+    }
+  }
+
+  #landing-anim-actions {
+    animation: 2s linear fadeIn;
+    height: 100px; 
+    position: absolute;
+    bottom: 15vh;
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    text-align: center; 
+    justify-content: space-between;
+    
+    p {
+      color: $white; 
+
+      span {
+        color: $green;
+        cursor: pointer;
       }
     }
   }
