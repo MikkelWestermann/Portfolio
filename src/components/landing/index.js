@@ -1,6 +1,6 @@
 import React, { Component } from 'react'; 
 
-import { Button } from 'antd';
+import { Button, Typography } from 'antd';
 
 import { 
   watchViewport, 
@@ -107,14 +107,15 @@ class Landing extends Component {
   }
   render() {
     const { pauseAnim, windowSize } = this.state;
+    const { Title } = Typography;
     return (
       <div id='landing-anim'>
         <P5Wrapper sketch={this.sketch}></P5Wrapper>
         <div id='landing-anim-me'>
-          <h1>Hi, I'm <span>Mikkel Westermann</span></h1>
+          <Title>Hi, I'm <span>Mikkel Westermann</span></Title>
           {
             windowSize.x > 400 &&
-            <h2>I'm a full-stack developer</h2>
+            <Title level={2}>I'm a full-stack developer</Title>
           }
         </div>
         <div id='landing-anim-actions'>
