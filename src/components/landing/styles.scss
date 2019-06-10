@@ -19,9 +19,9 @@ $text-color: #192937;
   align-items: center;
   
   #landing-anim-me {
-    animation: 1s linear fadeIn; 
+    animation: 1.5s linear fadeIn; 
     position: absolute; 
-    top: 20vh;
+    top: 15vh;
     text-align: center;
 
     h1, h2 {
@@ -35,15 +35,21 @@ $text-color: #192937;
   }
 
   #landing-anim-actions {
-    animation: 2s linear fadeIn;
+    animation: 2.5s linear fadeIn;
     height: 100px; 
     position: absolute;
-    bottom: 15vh;
+    bottom: 10vh;
     display: flex; 
     flex-direction: column;
     align-items: center; 
     text-align: center; 
     justify-content: space-between;
+
+    div {
+      button {
+        margin: 0 25px;
+      }
+    }
     
     p {
       color: $white; 

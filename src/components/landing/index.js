@@ -1,6 +1,6 @@
 import React, { Component } from 'react'; 
 
-import { Button, Typography } from 'antd';
+import { Button, Typography, Icon } from 'antd';
 
 import { 
   watchViewport, 
@@ -120,8 +120,8 @@ class Landing extends Component {
         </div>
         <div id='landing-anim-actions'>
           <div>
-            <Button>Download My Resume</Button>
-            <Button type='primary'>View My Work -></Button>
+            <Button icon="download" size='large'>Download My Resume</Button>
+            <Button type='primary' size='large'>View My Work <Icon type="arrow-right" /></Button>
           </div>
           {
             !pauseAnim ?
