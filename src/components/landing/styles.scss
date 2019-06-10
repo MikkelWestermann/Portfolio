@@ -1,10 +1,22 @@
 #landing-anim {
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
   background-color: rgb(25, 41, 55);
   display: flex; 
   flex-direction: column; 
   align-items: center;
   
   h1, h2 {
+    animation: 2s linear fadeIn; 
     position: absolute; 
     color: #eee;
     font-size: 3em; 
