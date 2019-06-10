@@ -88,8 +88,10 @@ class Landing extends Component {
     return (
       <div id='landing-anim'>
         <P5Wrapper sketch={this.sketch}></P5Wrapper>
-        <h1>Hi, I'm <span>Mikkel Westermann</span></h1>
-        <h2>I'm a full-stack developer</h2>
+        <div id='landing-anim-me'>
+          <h1>Hi, I'm <span>Mikkel Westermann</span></h1>
+          <h2>I'm a full-stack developer</h2>
+        </div>
       </div>
     )
   }

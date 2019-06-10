@@ -15,21 +15,19 @@
   flex-direction: column; 
   align-items: center;
   
-  h1, h2 {
+  #landing-anim-me {
     animation: 2s linear fadeIn; 
     position: absolute; 
-    color: #eee;
-    font-size: 3em; 
-  }
-  h1 {
     top: 20vh;
+    text-align: center;
 
-    span {
-      color: rgb(0, 150, 136);
-      font-weight: bold; 
+    h1, h2 {
+      color: #eee;
+      font-size: 3em; 
+      span {
+        color: rgb(0, 150, 136);
+        font-weight: bold; 
+      }
     }
-  }
-  h2 {
-    top: 25vh; 
   }
 }
