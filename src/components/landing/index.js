@@ -49,7 +49,7 @@ class Landing extends Component {
       p.setup = () => {
         p.createCanvas(p.windowWidth, p.windowHeight);
         p.noStroke();
-        colorA = p.color(139, 207, 200);
+        colorA = p.color(255,255,255);
         colorB = p.color(0, 150, 136);
       }
   
