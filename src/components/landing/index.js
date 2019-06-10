@@ -19,7 +19,8 @@ class Landing extends Component {
     windowSize: {
       x: 0,
       y: 0
-    }
+    },
+    pauseAnim: localStorage.getItem('pauseAnim') || false
   }
 
   componentWillMount() {
@@ -46,9 +47,10 @@ class Landing extends Component {
   }
 
   pauseAnim = () => {
-    this.setState(prevState =>  (
-      { pauseAnim: !prevState.pauseAnim } 
-    ))
+    this.setState(prevState =>  {
+      localStorage.setItem('pauseAnim', !prevState.pauseAnim)
+      return { pauseAnim: !prevState.pauseAnim } 
+    })
   }
 
   sketch = p => {
