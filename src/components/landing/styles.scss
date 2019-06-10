@@ -4,7 +4,20 @@
   flex-direction: column; 
   align-items: center;
   
+  h1, h2 {
+    position: absolute; 
+    color: #ddd; 
+    font-size: 3em; 
+  }
   h1 {
-    color: #fff; 
+    top: 20vh;
+
+    span {
+      color: rgb(0, 150, 136);
+      font-weight: bold; 
+    }
+  }
+  h2 {
+    top: 25vh; 
   }
 }
