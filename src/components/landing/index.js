@@ -20,9 +20,9 @@ class Landing extends Component {
       x: 0,
       y: 0
     },
-    pauseAnim: localStorage.getItem('pauseAnim') || false
+    pauseAnim: parseInt(localStorage.getItem('pauseAnim'))
   }
-
+  
   componentWillMount() {
     watchViewport(this.tornis)
   }
@@ -48,8 +48,9 @@ class Landing extends Component {
 
   pauseAnim = () => {
     this.setState(prevState =>  {
-      localStorage.setItem('pauseAnim', !prevState.pauseAnim)
-      return { pauseAnim: !prevState.pauseAnim } 
+      const pauseAnim = prevState.pauseAnim ? 0 : 1
+      localStorage.setItem('pauseAnim', pauseAnim)
+      return { pauseAnim: pauseAnim } 
     })
   }
 
@@ -105,13 +106,16 @@ class Landing extends Component {
       }
   }
   render() {
-    const { pauseAnim } = this.state;
+    const { pauseAnim, windowSize } = this.state;
     return (
       <div id='landing-anim'>
         <P5Wrapper sketch={this.sketch}></P5Wrapper>
         <div id='landing-anim-me'>
           <h1>Hi, I'm <span>Mikkel Westermann</span></h1>
-          <h2>I'm a full-stack developer</h2>
+          {
+            windowSize.x > 400 &&
+            <h2>I'm a full-stack developer</h2>
+          }
         </div>
         <div id='landing-anim-actions'>
           <div>
