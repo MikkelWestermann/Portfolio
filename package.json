@@ -7,6 +7,8 @@
     "babel-plugin-import": "^1.12.0",
     "customize-cra": "^0.2.13",
     "lax.js": "^1.2.3",
+    "less": "^3.9.0",
+    "less-loader": "^5.0.0",
     "node-sass": "^4.12.0",
     "p5": "^0.8.0",
     "react": "^16.8.6",
