@@ -45,9 +45,10 @@ class Landing extends Component {
     const maxCircleSize = 40, numRows = 10, numCols = 50, numStrands = 2; 
     let colorA, colorB; 
     let phase = 0, speed = 0.015;
+    const maxWindowWidth = 1200; 
   
       p.setup = () => {
-        p.createCanvas(p.windowWidth, p.windowHeight);
+        p.createCanvas(p.windowWidth < maxWindowWidth ? p.windowWidth : maxWindowWidth, p.windowHeight);
         p.noStroke();
         colorA = p.color(255,255,255);
         colorB = p.color(0, 150, 136);
@@ -77,12 +78,12 @@ class Landing extends Component {
       }
 
       p.windowResized = () => {
-        p.resizeCanvas(p.windowWidth, p.windowHeight)
+        p.resizeCanvas(p.windowWidth < maxWindowWidth ? p.windowWidth : maxWindowWidth, p.windowHeight)
       }
   }
   render() {
     return (
-      <div>
+      <div style={{backgroundColor: 'rgb(24, 40, 54)', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
         <P5Wrapper sketch={this.sketch}></P5Wrapper>
         <h1>Hello World!</h1>
       </div>
