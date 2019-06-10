@@ -4,10 +4,3 @@
 html, body {
   font-family: 'Raleway', sans-serif;
 }
-
-::selection {
-  background: #192937; /* WebKit/Blink Browsers */
-}
-::-moz-selection {
-  background: #192937; /* Gecko Browsers */
-}
