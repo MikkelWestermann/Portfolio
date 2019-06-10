@@ -88,6 +88,10 @@ class Landing extends Component {
         p.noStroke();
         colorA = p.color(238);
         colorB = p.color(0, 150, 136);
+
+        if (this.state.pauseAnim) {
+          drawFrame()
+        }
       }
   
       p.draw = () => {
