@@ -10,6 +10,7 @@ import {
 // Landing page sectional components
 import About from '../about';
 import Skills from '../skills';
+import Contact from '../contact';
 
 // import p5 wrapper for background sketch
 import P5Wrapper from 'react-p5-wrapper';
@@ -136,6 +137,7 @@ class Landing extends Component {
         </div>
         <About />
         <Skills />
+        <Contact />
       </div>
     )
   }
