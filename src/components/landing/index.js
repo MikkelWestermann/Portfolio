@@ -7,6 +7,10 @@ import {
   unwatchViewport
 } from 'tornis';
 
+// Landing page sectional components
+import About from '../about';
+import Skills from '../skills';
+
 // import p5 wrapper for background sketch
 import P5Wrapper from 'react-p5-wrapper';
 
@@ -34,7 +38,6 @@ class Landing extends Component {
 
   tornis = ({ size, scroll }) => {
     if (size.changed) {
-      console.log('Size ->', size)
       const windowSize = { ...this.state.windowSize }
       windowSize.x = size.x; 
       windowSize.y = size.y; 
@@ -42,7 +45,7 @@ class Landing extends Component {
     }
     
     if (scroll.changed) {
-      console.log('Scroll ->', scroll)
+      // console.log('Scroll ->', scroll)
     }
   }
 
@@ -56,7 +59,7 @@ class Landing extends Component {
 
   sketch = p => {
     // Not my artwork -> https://blog.kadenze.com/creative-technology/p5-js-crash-course-recreate-art-you-love/
-    const maxCircleSize = 40, numRows = 10, numCols = 50, numStrands = 2; 
+    const maxCircleSize = 50, numRows = 10, numCols = 30, numStrands = 2; 
     let colorA, colorB; 
     let phase = 0, speed = 0.015;
     const maxWindowWidth = 1200; 
@@ -109,26 +112,30 @@ class Landing extends Component {
     const { pauseAnim, windowSize } = this.state;
     const { Title } = Typography;
     return (
-      <div id='landing-anim'>
-        <P5Wrapper sketch={this.sketch}></P5Wrapper>
-        <div id='landing-anim-me'>
-          <Title>Hi, I'm <span>Mikkel Westermann</span></Title>
-          {
-            windowSize.x > 400 &&
-            <Title level={2}>I'm a full-stack developer</Title>
-          }
-        </div>
-        <div id='landing-anim-actions'>
-          <div>
-            <Button icon="download" size='large'>Download My Resume</Button>
-            <Button type='primary' size='large'>View My Work <Icon type="arrow-right" /></Button>
+      <div>
+        <div id='landing-anim'>
+          <P5Wrapper sketch={this.sketch}></P5Wrapper>
+          <div id='landing-anim-me'>
+            <Title>Hi, I'm <span>Mikkel Westermann</span></Title>
+            {
+              windowSize.x > 400 &&
+              <Title level={2}>I'm a full-stack developer</Title>
+            }
           </div>
-          {
-            !pauseAnim ?
-            <p>It's a pretty taxing animation running in the background click <span onClick={this.pauseAnim}>Here</span> to pause it</p>:
-            <p>It's a pretty awesome animation running in the background click <span onClick={this.pauseAnim}>Here</span> to unpause it</p>
-          }
+          <div id='landing-anim-actions'>
+            <div>
+              <Button icon="download" size='large'>Download My Resume</Button>
+              <Button type='primary' size='large'>View My Work <Icon type="arrow-right" /></Button>
+            </div>
+            {
+              !pauseAnim ?
+              <p>It's a pretty taxing animation running in the background click <span onClick={this.pauseAnim}>Here</span> to pause it</p>:
+              <p>It's a pretty awesome animation running in the background click <span onClick={this.pauseAnim}>Here</span> to unpause it</p>
+            }
+          </div>
         </div>
+        <About />
+        <Skills />
       </div>
     )
   }
