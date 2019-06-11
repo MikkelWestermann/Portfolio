@@ -9,9 +9,13 @@ import './styles.scss';
 const Footer = props => {
   const { Title } = Typography;
   return (
-    <Container>
-      <Title level={4}>Footer</Title>
-    </Container>
+    <div id='footer'>
+      <div id='footer-bubble' />
+      <div id='small-footer-bubble' />
+      <Container>
+        <Title style={{color: '#eee'}} level={4}>Footer</Title>
+      </Container>
+    </div>
   )
 }
 
