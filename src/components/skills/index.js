@@ -3,7 +3,7 @@ import { useLaxElement } from 'use-lax';
 
 import Section from '../Section';
 
-// import './styles.scss'
+import './styles.scss'
 
 const Skills = () => {
   // const meImage = useLaxElement();
