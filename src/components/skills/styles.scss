@@ -1,7 +1,20 @@
 #skills-section {
   background-color: #192937;
 
-  .ant-typography {
+  .ant-typography, .ant-divider-inner-text {
     color: #eee;
   }
+
+  .skills-code-wrapper {
+    display: flex;
+    .skills-code-image {
+      height: 300px;
+      width: 300px; 
+      background-color: red;
+    }
+  }
+  .skills-code-right {
+    justify-content: flex-end;
+  }
+
 }
