@@ -65,6 +65,8 @@ class Landing extends Component {
     let phase = 0, speed = 0.015;
     const maxWindowWidth = 1200; 
 
+    let isResized = false;
+
     const drawFrame = () => {
       p.background(24, 40, 54);
           phase = p.frameCount * speed;
@@ -100,13 +102,15 @@ class Landing extends Component {
       }
   
       p.draw = () => {
-        if (!this.state.pauseAnim) {
+        if (!this.state.pauseAnim || isResized) {
           drawFrame()
+          isResized = false;
         }
       }
 
       p.windowResized = () => {
         p.resizeCanvas(p.windowWidth < maxWindowWidth ? p.windowWidth : maxWindowWidth, p.windowHeight)
+        isResized = true;
       }
   }
   render() {
