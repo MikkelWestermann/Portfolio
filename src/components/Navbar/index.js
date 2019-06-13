@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import RightMenu from './sidebar'
 import { Drawer, Button } from 'antd';
 
+import { Link } from 'react-router-dom';
+
 import './styles.scss';
 
 class Navbar extends Component {
@@ -23,7 +25,7 @@ render() {
     return (
         <nav className="menuBar">
           <div className="logo">
-            <a href="">logo</a>
+            <Link to='/'>Logo</Link>
           </div>
           <div className="menuCon">
             <div className="rightMenu">

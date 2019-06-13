@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
 import { Menu } from 'antd';
+import { Link } from 'react-router-dom';
+
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
+
+
 class RightMenu extends Component {
   render() {
     return (
       <Menu mode="horizontal">
         <Menu.Item key="mail">
-          <a href="">Home</a>
+          <Link to='/'>Home</Link>
         </Menu.Item>
         <SubMenu title={<span>Blogs</span>}>
           <MenuItemGroup title="Item 1">
@@ -20,7 +24,7 @@ class RightMenu extends Component {
           </MenuItemGroup>
         </SubMenu>
         <Menu.Item key="alipay">
-          <a href="">Contact Us</a>
+          <Link to='/'>Contact</Link>
         </Menu.Item>
       </Menu>
     );
