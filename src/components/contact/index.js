@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLaxElement } from 'use-lax';
+// import { useLaxElement } from 'use-lax';
 
 import Section from '../Section';
 
