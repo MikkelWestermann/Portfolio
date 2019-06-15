@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import RightMenu from './sidebar'
+import Menu from './menu'
 import { Drawer, Button } from 'antd';
 
 import { Link } from 'react-router-dom';
@@ -29,7 +29,7 @@ render() {
           </div>
           <div className="menuCon">
             <div className="rightMenu">
-                <RightMenu />
+                <Menu />
             </div>
             <Button className="barsMenu" type="primary" onClick={this.showDrawer}>
               <span className="barsBtn"></span>
@@ -41,7 +41,7 @@ render() {
               onClose={this.onClose}
               visible={this.state.visible}
             >
-              <RightMenu />
+              <Menu sidebar={true} />
             </Drawer>
 </div>
         </nav>
