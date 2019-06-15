@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import Menu from './menu'
 import { Drawer, Button } from 'antd';
 
@@ -6,22 +6,14 @@ import { Link } from 'react-router-dom';
 
 import './styles.scss';
 
-class Navbar extends Component {
-  state = {
-    current: 'mail',
-    visible: false
-  }
-  showDrawer = () => {
-    this.setState({
-      visible: true,
-    });
+const Navbar = () => {
+  const [visible, setVisible] = useState(false);
+  const showDrawer = () => {
+    setVisible(true);
   };
-onClose = () => {
-    this.setState({
-      visible: false,
-    });
+  const onClose = () => {
+    setVisible(false);
   };
-render() {
     return (
         <nav className="menuBar">
           <div className="logo">
@@ -31,21 +23,20 @@ render() {
             <div className="rightMenu">
                 <Menu />
             </div>
-            <Button className="barsMenu" type="primary" onClick={this.showDrawer}>
-              <span className="barsBtn"></span>
+            <Button className="barsMenu" type="primary" onClick={showDrawer}>
+              <span className="barsBtn" />
             </Button>
             <Drawer
               title="Basic Drawer"
               placement="right"
               closable={false}
-              onClose={this.onClose}
-              visible={this.state.visible}
+              onClose={onClose}
+              visible={visible}
             >
               <Menu sidebar={true} />
             </Drawer>
           </div>
         </nav>
     );
-  }
 }
 export default Navbar;
