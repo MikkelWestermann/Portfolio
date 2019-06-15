@@ -43,7 +43,7 @@ render() {
             >
               <Menu sidebar={true} />
             </Drawer>
-</div>
+          </div>
         </nav>
     );
   }
