@@ -13,7 +13,7 @@ const { Title } = Typography;
  return (
   <section className='section' id={id || ''}>
     <Container>
-      <div className='section-title' ref={ref} data-lax-preset="leftToRight-.1 fadeInOut">
+      <div className='section-title' ref={ref} data-lax-preset="leftToRight-.025 fadeInOut">
         <Title level={2}>{ title }</Title>
       </div>
       { children }
