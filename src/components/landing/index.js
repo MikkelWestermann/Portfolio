@@ -60,8 +60,7 @@ class Landing extends Component {
 
   sketch = p => {
     // Not my artwork -> https://blog.kadenze.com/creative-technology/p5-js-crash-course-recreate-art-you-love/
-    const maxCircleSize = 50, numRows = 10, numCols = 30, numStrands = 2; 
-    let colorA, colorB; 
+    let maxCircleSize, numRows, numCols, numStrands, heightMultiplier, colorA, colorB; 
     let phase = 0, speed = 0.015;
     const maxWindowWidth = 1200; 
 
@@ -79,7 +78,7 @@ class Landing extends Component {
               const x = p.map(col, 0, numCols, 50, p.width - 50);
               
               for(let row = 0; row < numRows; row++) {
-                const y = p.height/2 + row * 10 + p.sin(strandPhase + colOffset) * 50;
+                const y = p.height/2 + row * 10 + p.sin(strandPhase + colOffset) * heightMultiplier;
                 const sizeOffset = (p.cos(strandPhase - (row / numRows) + colOffset) + 1) * 0.5;
                 const circleSize = sizeOffset * maxCircleSize;
                 
@@ -89,29 +88,53 @@ class Landing extends Component {
             }
           }
     }
-  
-      p.setup = () => {
-        p.createCanvas(p.windowWidth < maxWindowWidth ? p.windowWidth : maxWindowWidth, p.windowHeight);
-        p.noStroke();
-        colorA = p.color(238);
-        colorB = p.color(0, 150, 136);
 
-        if (this.state.pauseAnim) {
-          drawFrame()
-        }
+    const variables = windowWidth => {
+      if (windowWidth < 500) {
+        maxCircleSize = 20;
+        numRows = 8;
+        numCols = 20;
+        numStrands = 2;
+        heightMultiplier = 25; 
+      } else if (windowWidth < 992) {
+        maxCircleSize = 40;
+        numRows = 10;
+        numCols = 25;
+        numStrands = 2;
+        heightMultiplier = 50; 
+      } else {
+        maxCircleSize = 50;
+        numRows = 10;
+        numCols = 30;
+        numStrands = 2;
+        heightMultiplier = 50; 
       }
+    }
   
-      p.draw = () => {
-        if (!this.state.pauseAnim || isResized) {
-          drawFrame()
-          isResized = false;
-        }
-      }
+    p.setup = () => {
+      variables(p.windowWidth);
+      p.createCanvas(p.windowWidth < maxWindowWidth ? p.windowWidth : maxWindowWidth, p.windowHeight);
+      p.noStroke();
+      colorA = p.color(238);
+      colorB = p.color(0, 150, 136);
 
-      p.windowResized = () => {
-        p.resizeCanvas(p.windowWidth < maxWindowWidth ? p.windowWidth : maxWindowWidth, p.windowHeight)
-        isResized = true;
+      if (this.state.pauseAnim) {
+        drawFrame()
       }
+    }
+
+    p.draw = () => {
+      if (!this.state.pauseAnim || isResized) {
+        drawFrame()
+        isResized = false;
+      }
+    }
+
+    p.windowResized = () => {
+      variables(p.windowWidth);
+      p.resizeCanvas(p.windowWidth < maxWindowWidth ? p.windowWidth : maxWindowWidth, p.windowHeight)
+      isResized = true;
+    }
   }
   render() {
     const { pauseAnim, windowSize } = this.state;
