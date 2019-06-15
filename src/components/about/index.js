@@ -3,13 +3,28 @@ import { useLaxElement } from 'use-lax';
 
 import Section from '../Section';
 
+import { Typography, Icon } from 'antd';
+
 import './styles.scss'
 
 const About = () => {
-  const meImage = useLaxElement();
+  const meArrow = useLaxElement()
+  const { Paragraph, Text } = Typography;
   return (
-    <Section title='About Me' id='about-section'>
-      <div ref={meImage} className='me-image' />
+    <Section title='About' id='about-section'>
+      <div id='about-me-image'>
+        <div id='me-image-group'>
+          <div id='me-image-background-bubble' />
+          <div id='me-image' />
+          <div id='me-image-foreground-bubble' />
+        </div>
+        <div id='me-arrow' ref={meArrow} data-lax-preset='fadeIn rightToLeft-.2'><Icon type="arrow-left" /> That's me</div>
+      </div>
+      <Typography>
+        <Paragraph>
+          <Text strong>Hi! And welcome to my portfolio / playground.</Text> This is a website for showcasing my work, and for me to try out awesome new (or new to me) technologies like serverless architecture and React Hooks.
+        </Paragraph>
+      </Typography>
     </Section>
   );
 }
