@@ -10,16 +10,12 @@ const MenuComponent = ({ sidebar }) => {
   return (
     <Menu mode={sidebar ? 'vertical' : 'horizontal'}>
       <Menu.Item key="mail">
-        <Link to='/'>Home</Link>
+        <Link to='/'>Projects</Link>
       </Menu.Item>
-      <SubMenu title={<span>Blogs</span>}>
-        <MenuItemGroup title="Web Dev">
-          <Menu.Item key="setting:1">Option 1</Menu.Item>
-          <Menu.Item key="setting:2">Option 2</Menu.Item>
-        </MenuItemGroup>
-        <MenuItemGroup title="Item 2">
-          <Menu.Item key="setting:3">Option 3</Menu.Item>
-          <Menu.Item key="setting:4">Option 4</Menu.Item>
+      <SubMenu title={<span>Demos</span>}>
+        <MenuItemGroup title="Backend">
+          <Menu.Item key="setting:1">Url Shortener</Menu.Item>
+          <Menu.Item key="setting:2">Email Scheduler</Menu.Item>
         </MenuItemGroup>
       </SubMenu>
       <Menu.Item key="alipay">
