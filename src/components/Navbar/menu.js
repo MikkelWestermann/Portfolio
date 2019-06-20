@@ -21,7 +21,7 @@ const MenuComponent = ({ sidebar }) => {
       <Menu.Item key="alipay">
         <a href='#contact'>Contact</a>
       </Menu.Item>
-</Menu>
+    </Menu>
   );
 }
 export default MenuComponent;
