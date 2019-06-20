@@ -8,7 +8,7 @@ import Section from '../Section';
 const Contact = () => {
   // const meImage = useLaxElement();
   return (
-    <Section title='Contact' id='about-section'>
+    <Section title='Contact' id='contact'>
       
     </Section>
   );
