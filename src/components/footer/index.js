@@ -13,18 +13,12 @@ const Footer = props => {
       <div id='footer-bubble' />
       <div id='small-footer-bubble' />
       <Container>
-        <Title style={{color: '#eee'}} level={3}>Footer</Title>
+        <Title style={{color: '#eee'}} level={3}>Contact</Title>
         <div id='footer-content'>
           <div>
-            <p>Other content</p>
-            <p>Other content</p>
-            <p>Other content</p>
-            <p>Other content</p>
-            <p>Other content</p>
-            <p>Other content</p>
-            <p>Other content</p>
-            <p>Other content</p>
-            <p>Other content</p>
+            <p>mikkel.westermann.98@gmail.com</p>
+            <p><a href='/#contact'>Contact Section</a></p>
+            <p>You can also send me a message on one of the social channels on the right <Icon type="arrow-right" /></p>
           </div>
           <div id='footer-social'>
             <Title level={4}>Social</Title>
