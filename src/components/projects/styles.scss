@@ -25,4 +25,11 @@
       border-radius: 15px;
     }
   }
+
+  .project-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+  }
 }
