@@ -13,7 +13,7 @@ const Project = ({ app }) => {
   return (
     <div className='project'>
       <div className='project-background' style={{backgroundImage: `url(https://andiscle.sirv.com/Portfolio/${app.id}/${app.background}?w=300&h=300)`}}>
-        <img className='project-icon' src={`https://andiscle.sirv.com/Portfolio/${app.id}/${app.icon}?w=100&h=100`} />
+        <img alt={`${app.name} app icon`} className='project-icon' src={`https://andiscle.sirv.com/Portfolio/${app.id}/${app.icon}?w=100&h=100`} />
       </div>
       <div className='project-info'>
         <Title level={2}>{ app.name }</Title>
