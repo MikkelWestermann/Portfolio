@@ -13,16 +13,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: blue;
     height: 300px;
     width: 300px;
     border-radius: 100%;
+    background-repeat: none;
+    background-position: center;
+    background-size: cover;
 
     .project-icon {
-      background-color: teal;
       height: 100px;
       width: 100px;
-      border-radius: 15px;
+      border-radius: 20px;
     }
   }
 
