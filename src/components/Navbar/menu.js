@@ -19,7 +19,7 @@ const MenuComponent = ({ sidebar }) => {
         </MenuItemGroup>
       </SubMenu>
       <Menu.Item key="alipay">
-        <a href='#contact'>Contact</a>
+        <a href='/#contact'>Contact</a>
       </Menu.Item>
     </Menu>
   );
