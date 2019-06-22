@@ -34,6 +34,18 @@
           display: flex;
           justify-content: space-evenly;
         }
+
+
+        #footer-social-buttons {
+          i {
+            transition: 0.15s linear all;
+            cursor: pointer;
+          }
+          i:hover {
+            color: #009688;
+            transform: scale(1.2);
+          }
+        }
       }
     }
   }
