@@ -30,7 +30,7 @@ const Projects = props => {
       <Title level={1} className='page-header'>Projects</Title>
       {
         data.map(app => (
-          <Project app={app} />
+          <Project app={app} key={app.id} />
         ))
       }
     </Container>
