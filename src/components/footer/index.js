@@ -23,9 +23,9 @@ const Footer = props => {
           <div id='footer-social'>
             <Title level={4}>Social</Title>
             <div id='footer-social-buttons'>
-              <Icon style={{ fontSize: '2.5em' }} type="github" />
-              <Icon style={{ fontSize: '2.5em' }} type="linkedin" theme="filled" />
-              <Icon style={{ fontSize: '2.5em' }} type="twitter" />
+              <a style={{color: '#eee'}} target='_blank' rel="noopener noreferrer" href='https://github.com/MikkelWestermann'><Icon style={{ fontSize: '2.5em' }} type="github" /></a>
+              <a style={{color: '#eee'}} target='_blank' rel="noopener noreferrer" href='https://www.linkedin.com/in/mikkel-westermann/'><Icon style={{ fontSize: '2.5em' }} type="linkedin" theme="filled" /></a>
+              <a style={{color: '#eee'}} target='_blank' rel="noopener noreferrer" href='https://twitter.com/MTWestermann'><Icon style={{ fontSize: '2.5em' }} type="twitter" /></a>
             </div>
           </div>
         </div>
