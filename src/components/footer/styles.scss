@@ -7,19 +7,30 @@
   overflow: hidden;
   padding: 50px 0;
   
-  .ant-typography {
-    color: #eee !important; 
-  }
-
-  #footer-content {
+  .container {
+    height: 400px;
     display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-end;
+    .ant-typography {
+      color: #eee !important; 
+    }
+  
+    #footer-content {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-end;
 
-    #footer-social {
-      z-index: 1;
+      #footer-contact-info {
+        width: 50%;
+      }
+  
+      #footer-social {
+        z-index: 1;
+      }
     }
   }
+
 
   #footer-bubble {
     position: absolute;
