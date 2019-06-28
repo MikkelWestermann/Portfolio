@@ -1,21 +1,42 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Menu from './menu'
 import { Drawer, Button } from 'antd';
-
 import { Link } from 'react-router-dom';
+
+import { 
+  watchViewport, 
+  unwatchViewport
+} from 'tornis';
 
 import './styles.scss';
 
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
+  const [scroll, setScroll] = useState();
+  
+  useEffect(() => {
+    watchViewport(tornis)
+
+    return () => {
+      unwatchViewport(tornis)
+    }
+  }, [])
+
+  const tornis = ({ scroll }) => {
+    if (scroll.changed) {
+      setScroll(scroll)
+    }
+  }
+
   const showDrawer = () => {
     setVisible(true);
   };
   const onClose = () => {
     setVisible(false);
   };
+
     return (
-        <nav className="menuBar">
+        <nav className={`menuBar ${scroll && scroll.top > 50 ? 'scrolled-menubar' : ''}`}>
           <div className="logo">
             <Link to='/'><span>{'<Home />'}</span></Link>
           </div>

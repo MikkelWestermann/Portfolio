@@ -3,13 +3,36 @@
   padding: 0 20px;
   overflow: auto;
   position: fixed;
-  background-color: #fff;
   z-index: 500;
+  transition: all 0.25s linear;
 }
+
+.scrolled-menubar {
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 42px -20px rgba(25,41,55,0.75);
+  -moz-box-shadow: 0px 0px 42px -20px rgba(25,41,55,0.75);
+  box-shadow: 0px 0px 42px -20px rgba(25,41,55,0.75);
+
+  .logo {
+    opacity: 1;
+  }
+  .menuCon .ant-menu-submenu-title{
+    color: #192937;
+    opacity: 0.75;
+  }
+  .menuCon .ant-menu-item a, .menuCon .ant-menu-submenu-title a{
+    color: #192937;
+    opacity: 0.75;
+  }
+}
+
 .logo{
   width: 150px;
   float: left;
+  opacity: 0.5;
+  transition: opacity 0.25s linear;
 }
+
 .logo a{
   display: inline-block;
   font-size: 22px;
@@ -26,12 +49,17 @@
 }
 .menuCon .ant-menu-submenu-title{
   padding: 10px 20px;
+  color: #eee;
+  opacity: 0.5;
 }
 .menuCon .ant-menu-item a, .menuCon .ant-menu-submenu-title a{
   padding: 10px 15px;
+  color: #eee;
+  opacity: 0.5;
 }
 .menuCon .ant-menu-horizontal{
   border-bottom: none;
+  background-color: unset;
 }
 .menuCon .rightMenu{
   float: right;
