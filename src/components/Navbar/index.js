@@ -1,12 +1,40 @@
 import React, { useState, useEffect } from 'react';
 import Menu from './menu'
-import { Drawer, Button, Icon } from 'antd';
+import { Drawer, Button, Icon, Modal } from 'antd';
 import { Link } from 'react-router-dom';
+
+import { 
+  watchViewport, 
+  unwatchViewport
+} from 'tornis';
 
 import './styles.scss';
 
-const Navbar = ({ scroll }) => {
+const Navbar = () => {
+  let windowWidth = window.innerWidth;
+
   const [visible, setVisible] = useState(false);
+  const [scroll, setScroll] = useState();
+  const [responsivenessCheck, setResponsivenessCheck] = useState(false);
+  
+  useEffect(() => {
+    watchViewport(tornis)
+    
+    return () => {
+      unwatchViewport(tornis)
+    }
+  }, [])
+  
+  const tornis = ({ size, scroll }) => {
+    if (scroll.changed) {
+      setScroll(scroll)
+    }
+    
+    if (windowWidth && Math.abs(windowWidth - size.x) > 100) {
+      setResponsivenessCheck(true)
+      windowWidth = false;
+    }
+  }
 
   const showDrawer = () => {
     setVisible(true);
@@ -37,6 +65,15 @@ const Navbar = ({ scroll }) => {
             <Menu sidebar={true} />
           </Drawer>
         </div>
+        <Modal
+          title='Testing responseiveness?'
+          visible={responsivenessCheck}
+          onCancel={() => setResponsivenessCheck(false)}
+          footer={false}
+        >
+          <p>Cool! You might have to reload the page to get all the awesome (<a href='https://github.com/alexfoxy/laxxx'>Lax.js</a>) scroll animations, though. They behave based on the initial viewport size</p>
+          <Button block type='primary' onClick={() => window.location.reload()}>Reload <Icon type="reload" /></Button>
+        </Modal>
       </nav>
     );
 }
