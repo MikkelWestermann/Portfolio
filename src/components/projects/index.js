@@ -1,6 +1,6 @@
 import React from 'react'; 
 import { Typography } from 'antd';
-import Container from '../Container';
+import SubPage from '../sub-page';
 import { data } from '../../Data/AppData';
 
 import './styles.scss';
@@ -26,14 +26,15 @@ const Project = ({ app }) => {
 
 const Projects = props => {
   return (
-    <Container>
-      <Title level={1} className='page-header'>Projects</Title>
+    <SubPage 
+      title='Projects'
+    >
       {
         data.map(app => (
           <Project app={app} key={app.id} />
         ))
       }
-    </Container>
+    </SubPage>
   )
 }
 
