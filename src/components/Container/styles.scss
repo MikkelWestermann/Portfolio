@@ -2,4 +2,8 @@
   margin: 0 auto; 
   width: 95vw; 
   max-width: 1000px;
+
+  &.text-container  {
+    max-width: 750px;
+  }
 }
