@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Menu from './menu'
-import { Drawer, Button } from 'antd';
+import { Drawer, Button, Icon } from 'antd';
 import { Link } from 'react-router-dom';
 
 import { 
@@ -45,7 +45,7 @@ const Navbar = () => {
                 <Menu />
             </div>
             <Button className="barsMenu" type="primary" onClick={showDrawer}>
-              <span className="barsBtn" />
+              <Icon type="menu" />
             </Button>
             <Drawer
               title="Basic Drawer"

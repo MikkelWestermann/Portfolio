@@ -24,6 +24,11 @@
     color: #192937;
     opacity: 0.75;
   }
+
+  .barsMenu{
+    color: #192937;
+    opacity: 0.75;
+  }
 }
 
 .ant-menu-item, .ant-menu-submenu-horizontal {
@@ -113,26 +118,6 @@
   display: none;
   background: none;
 }
-.barsBtn{
-  display: block;
-  width: 20px;
-  height: 2px;
-  background: #1890ff;
-  position: relative;
-}
-.barsBtn:after,.barsBtn:before{
-  content: attr(x);
-  width: 20px;
-  position: absolute;
-  top: -6px;
-  left: 0;
-  height: 2px;
-  background: #1890ff;
-}
-.barsBtn:after{
-  top: auto;
-  bottom: -6px;
-}
 .ant-drawer-body{
   padding: 0;
 }
@@ -150,6 +135,11 @@
 @media(max-width: 767px){
   .barsMenu{
     display: inline-block;
+    border: none;
+    color: #eee;
+    font-size: 1.25em;
+    opacity: 0.5;
+    box-shadow: none;
   }
   .rightMenu{
     display: none;
