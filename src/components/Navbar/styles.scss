@@ -5,6 +5,16 @@
   position: fixed;
   z-index: 500;
   transition: all 0.25s linear;
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  animation: 1s linear fadeIn; 
 }
 
 .scrolled-menubar {
