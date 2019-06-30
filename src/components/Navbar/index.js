@@ -11,30 +11,29 @@ import {
 import './styles.scss';
 
 const Navbar = () => {
-  let windowWidth = window.innerWidth;
-
   const [visible, setVisible] = useState(false);
   const [scroll, setScroll] = useState();
   const [responsivenessCheck, setResponsivenessCheck] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
   
   useEffect(() => {
+    const tornis = ({ size, scroll }) => {
+      if (scroll.changed) {
+        setScroll(scroll)
+      }
+      
+      if (windowWidth && Math.abs(windowWidth - size.x) > 100) {
+        setResponsivenessCheck(true)
+        setWindowWidth(false)
+      }
+    }
     watchViewport(tornis)
     
     return () => {
       unwatchViewport(tornis)
     }
-  }, [])
-  
-  const tornis = ({ size, scroll }) => {
-    if (scroll.changed) {
-      setScroll(scroll)
-    }
-    
-    if (windowWidth && Math.abs(windowWidth - size.x) > 100) {
-      setResponsivenessCheck(true)
-      windowWidth = false;
-    }
-  }
+  }, [windowWidth])
 
   const showDrawer = () => {
     setVisible(true);
