@@ -26,11 +26,52 @@
   }
 }
 
+.ant-menu-item, .ant-menu-submenu-horizontal {
+  border-bottom: none !important;
+  position: relative;
+  margin-top: 2.5px !important;
+
+  .nav-background-circle {
+    height: 69px;
+    width: 69px;
+    background-color: teal;
+    border-radius: 100%;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: -2.5px;
+    z-index: -1;
+    transform: scale(0);
+    transition: transform 0.2s linear;
+  }
+
+  .nav-demos-item, .ant-menu-submenu-title, a {
+    transition: all 0.4s linear;
+  }
+}
+
+.ant-menu-item:hover, .ant-menu-submenu:hover {
+  .nav-background-circle {
+    transform: scale(1)
+  }
+  
+  .nav-demos-item, .ant-menu-submenu-title, a {
+    opacity: 1 !important;
+    color: #eee !important;
+  }
+}
+
 .logo{
   width: 150px;
   float: left;
   opacity: 0.5;
   transition: opacity 0.25s linear;
+}
+
+.logo:hover {
+  opacity: 1;
 }
 
 .logo a{
