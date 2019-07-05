@@ -67,6 +67,7 @@ class Landing extends Component {
     let isResized = false;
 
     const drawFrame = () => {
+      p.background(24, 40, 54);
           phase = p.frameCount * speed;
           
           for(let strand = 0; strand < numStrands; strand++) {
