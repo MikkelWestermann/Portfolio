@@ -151,8 +151,8 @@ class Landing extends Component {
           </div>
           <div id='landing-anim-actions'>
             <div>
-              <Button icon="download" size='large' className='download-resume'>Download My Resume</Button>
-              <Button type='primary' size='large' className='view-my-work' onClick={() => window.scroll({ top: windowSize.y, left: 0, behavior: 'smooth' })}>View My Work <Icon type="right" /></Button>
+              <Button icon="download" size='large' className='download-resume custom-button-hover'>Download My Resume</Button>
+              <Button type='primary' size='large' className='view-my-work custom-button-hover' onClick={() => window.scroll({ top: windowSize.y, left: 0, behavior: 'smooth' })}>View My Work <Icon type="right" /></Button>
             </div>
             {
               !pauseAnim ?
