@@ -2,17 +2,6 @@ $white: #eee;
 $green: #009688;
 $text-color: #192937;
 #landing-anim {
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
   background-color: $text-color;
   height: 100vh;
   width: 100vw; 
@@ -54,6 +43,12 @@ $text-color: #192937;
       button {
         margin: 0 25px;
       }
+
+      .download-resume:hover {
+        i {
+          animation: downloadIcon 0.5s linear;
+        }
+      }
     }
     
     p {
@@ -64,5 +59,37 @@ $text-color: #192937;
         cursor: pointer;
       }
     }
+  }
+}
+
+// Animations 
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes downloadIcon {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(5px);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+  75% {
+    transform: translateY(3px);
+  }
+  100% {
+    transform: translateY(0)
   }
 }

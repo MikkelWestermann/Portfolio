@@ -151,7 +151,7 @@ class Landing extends Component {
           </div>
           <div id='landing-anim-actions'>
             <div>
-              <Button icon="download" size='large'>Download My Resume</Button>
+              <Button icon="download" size='large' className='download-resume'>Download My Resume</Button>
               <Button type='primary' size='large'>View My Work <Icon type="arrow-right" /></Button>
             </div>
             {
