@@ -1,0 +1,19 @@
+.custom-button-hover {
+  transition: transform 0.25s ease;
+}
+
+.custom-button-hover:hover {
+  box-shadow:
+            1px 1px #009688,
+            2px 2px #009688,
+            3px 3px #009688;
+    -webkit-transform: translateX(-3px);
+    transform: translate(-3px, -1px);
+}
+
+.ant-btn-primary.custom-button-hover:hover {
+  box-shadow:
+            1px 1px #eee,
+            2px 2px #eee,
+            3px 3px #eee;
+}
