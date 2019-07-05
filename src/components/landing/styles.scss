@@ -49,6 +49,12 @@ $text-color: #192937;
           animation: downloadIcon 0.5s linear;
         }
       }
+
+      .view-my-work:hover {
+        i {
+          animation: viewMyWorkIcon 0.5s linear;
+        }
+      }
     }
     
     p {
@@ -93,3 +99,22 @@ $text-color: #192937;
     transform: translateY(0)
   }
 }
+
+@keyframes viewMyWorkIcon {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(-2px);
+  }
+  75% {
+    transform: translateX(3px);
+  }
+  100% {
+    transform: translateX(0)
+  }
+}
+
