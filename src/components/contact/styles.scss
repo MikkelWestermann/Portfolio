@@ -1,0 +1,18 @@
+#contact {
+  .contact-form {
+    height: 500px; 
+    width: 500px;
+    margin: 0 auto;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(25,41,55,0.25);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(25,41,55,0.25);
+    box-shadow: 0px 0px 15px 0px rgba(25,41,55,0.25);
+
+    .contact-form-button {
+      background: rgb(1,181,164);
+      background: linear-gradient(90deg, rgba(1,181,164,1) 0%, rgba(0,150,136,1) 91%);
+      border: none;
+      padding: 0 35px;
+    }
+  }
+}
