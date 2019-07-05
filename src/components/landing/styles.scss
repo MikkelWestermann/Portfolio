@@ -46,13 +46,13 @@ $text-color: #192937;
 
       .download-resume:hover {
         i {
-          animation: downloadIcon 0.5s linear;
+          animation: downloadIcon 0.75s linear;
         }
       }
 
       .view-my-work:hover {
         i {
-          animation: viewMyWorkIcon 0.5s linear;
+          animation: viewMyWorkIcon 0.75s linear;
         }
       }
     }
@@ -87,12 +87,15 @@ $text-color: #192937;
     transform: translateY(0);
   }
   25% {
-    transform: translateY(5px);
+    transform: translateY(0)
   }
   50% {
+    transform: translateY(5px);
+  }
+  65% {
     transform: translateY(-2px);
   }
-  75% {
+  85% {
     transform: translateY(3px);
   }
   100% {
@@ -105,12 +108,15 @@ $text-color: #192937;
     transform: translateX(0);
   }
   25% {
-    transform: translateX(5px);
+    transform: translateX(0)
   }
   50% {
+    transform: translateX(5px);
+  }
+  65% {
     transform: translateX(-2px);
   }
-  75% {
+  85% {
     transform: translateX(3px);
   }
   100% {
