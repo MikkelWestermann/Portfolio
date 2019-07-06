@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Form, Button, Icon, Input, Select } from 'antd';
 // import { useLaxElement } from 'use-lax';
 
@@ -9,13 +9,15 @@ import './styles.scss'
 const Contact = ( { form } ) => {
   // const meImage = useLaxElement();
 
+  const [formSubmitState, setFormSubmitState] = useState();
+
   const { getFieldDecorator } = form;
 
   const handleSubmit = e => {
     e.preventDefault();
     form.validateFields((err, values) => {
       if (!err) {
-        console.log('Received values of form: ', values);
+        setFormSubmitState({ isFetching: true })
       }
     });
   };
@@ -72,7 +74,7 @@ const Contact = ( { form } ) => {
         </Form.Item>
         <Form.Item>
           <Button size='large' type="primary" htmlType="submit" className="contact-form-button custom-button-hover">
-            Submit <Icon type="upload" />
+            Submit { formSubmitState && formSubmitState.isFetching ? <Icon type="loading" /> : <Icon type="upload" />}
           </Button>
         </Form.Item>
       </Form>
