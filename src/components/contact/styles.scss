@@ -26,6 +26,24 @@
         animation: uploadIcon 0.5s linear;
       }
     }
+
+    .contact-submission-confirmation {
+      position: absolute;
+      opacity: 0.5;
+      text-align: center;
+      transform: scale(0, 0);
+      transition: transform 0.25s linear;
+    }
+
+    .contact-submission-confirmation-show {
+      position: unset;
+      transform: scale(1, 1)
+    }
+
+    .contact-submission-confirmation-fail {
+      position: unset;
+      transform: scale(1, 1)
+    }
   }
 }
 
