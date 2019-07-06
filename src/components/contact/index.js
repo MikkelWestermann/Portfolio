@@ -9,7 +9,7 @@ import './styles.scss'
 const Contact = ( { form } ) => {
   // const meImage = useLaxElement();
 
-  const { getFieldDecorator, getFieldsError, getFieldError, isFieldTouched } = form;
+  const { getFieldDecorator } = form;
 
   const handleSubmit = e => {
     e.preventDefault();
