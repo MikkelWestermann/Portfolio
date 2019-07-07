@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Button, Icon, Input, Select } from 'antd';
+import { Form, Button, Icon, Input, Select, Tooltip } from 'antd';
 // import { useLaxElement } from 'use-lax';
 
 import Section from '../Section';
@@ -105,7 +105,7 @@ const Contact = ( { form } ) => {
           }
         </Form.Item>
         <Form.Item>
-          <Button size='large' type="primary" htmlType="submit" className="contact-form-button custom-button-hover">
+          <Button size='large' type="primary" htmlType="submit" className="contact-form-button custom-button-hover" disabled={formSubmitState && formSubmitState.status < 400}>
             Submit { submitButtonIcon() }
           </Button>
         </Form.Item>
