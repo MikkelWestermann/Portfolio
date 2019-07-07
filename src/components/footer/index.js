@@ -1,4 +1,5 @@
 import React from 'react'; 
+import { useLaxElement } from 'use-lax';
 
 import Container from '../Container';
 
@@ -7,11 +8,13 @@ import { Typography, Icon } from 'antd'
 import './styles.scss';
 
 const Footer = props => {
+  const smallBubble = useLaxElement();
+  const largeBubble = useLaxElement();
   const { Title } = Typography;
   return (
     <div id='footer'>
-      <div id='footer-bubble' />
-      <div id='small-footer-bubble' />
+      <div ref={largeBubble} id='footer-bubble' data-lax-preset='rightToLeft-.1' />
+      <div ref={smallBubble} id='small-footer-bubble' data-lax-preset='leftToRight-.1' />
       <Container>
         <Title style={{color: '#eee'}} level={3}>Contact</Title>
         <div id='footer-content'>
