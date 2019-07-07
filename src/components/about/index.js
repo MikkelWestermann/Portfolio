@@ -10,14 +10,16 @@ import './styles.scss'
 
 const About = () => {
   const meArrow = useLaxElement()
+  const backgroundBubble = useLaxElement()
+  const smallBubble = useLaxElement()
   const { Paragraph, Text, Title } = Typography;
   return (
     <Section title='About' id='about-section'>
       <div id='about-me-image'>
         <div id='me-image-group'>
-          <div id='me-image-background-bubble' />
+          <div ref={backgroundBubble} id='me-image-background-bubble' data-lax-preset="leftToRight-.02" />
           <div id='me-image' />
-          <div id='me-image-foreground-bubble' />
+          <div ref={smallBubble} id='me-image-foreground-bubble' data-lax-preset="rightToLeft-.05" />
         </div>
         <div id='me-arrow' ref={meArrow} data-lax-preset='fadeIn rightToLeft-.2'><Icon type="arrow-left" /> That's me</div>
       </div>
