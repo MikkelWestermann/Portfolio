@@ -28,7 +28,7 @@ const Contact = ( { form } ) => {
             'Accept': 'application/json'
           },
           body: JSON.stringify({
-            email: 'mikkel.westermann.98@gmail.com',
+            email: 'hi@mikkelwestermann.com',
             date: scheduledDate,
             data: {
               subject: `email from ${values.name} about ${values.about}`
