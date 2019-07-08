@@ -146,7 +146,7 @@ class Landing extends Component {
           <div id='landing-anim-me'>
             <Title>Hi, I'm <span>Mikkel Westermann</span></Title>
             {
-              windowSize.x > 400 &&
+              windowSize.x > 450 &&
               <Title level={2}>I'm a full-stack developer</Title>
             }
           </div>
