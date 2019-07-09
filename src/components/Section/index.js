@@ -8,12 +8,12 @@ import { Typography } from 'antd'
 import './styles.scss';
 
 const Section = ({ children, title, id }) => {
-const ref = useLaxElement();
+const sectionTitleRef = useLaxElement();
 const { Title } = Typography;
  return (
   <section className='section' id={id || ''}>
     <Container>
-      <div className='section-title' ref={ref} data-lax-preset="leftToRight-.025 fadeInOut">
+      <div className='section-title' ref={sectionTitleRef} data-lax-preset="leftToRight-.025 fadeInOut">
         <Title level={2}>{ title }</Title>
       </div>
       { children }

@@ -8,13 +8,13 @@ import { Typography, Icon } from 'antd'
 import './styles.scss';
 
 const Footer = props => {
-  const smallBubble = useLaxElement();
-  const largeBubble = useLaxElement();
+  const smallFooterBubble = useLaxElement();
+  const largeFooterBubble = useLaxElement();
   const { Title } = Typography;
   return (
     <div id='footer'>
-      <div ref={largeBubble} id='footer-bubble' data-lax-preset='rightToLeft-.1' />
-      <div ref={smallBubble} id='small-footer-bubble' data-lax-preset='leftToRight-.1' />
+      <div ref={largeFooterBubble} id='footer-bubble' data-lax-preset='rightToLeft-.1' />
+      <div ref={smallFooterBubble} id='small-footer-bubble' data-lax-preset='leftToRight-.1' />
       <Container>
         <Title style={{color: '#eee'}} level={3}>Contact</Title>
         <div id='footer-content'>
