@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Form, Button, Icon, Input, Select } from 'antd';
-// import { useLaxElement } from 'use-lax';
 
 import Section from '../Section';
 
@@ -8,7 +7,6 @@ import './styles.scss'
 import { useLaxElement } from 'use-lax';
 
 const Contact = ( { form } ) => {
-  // const meImage = useLaxElement();
 
   const [formSubmitState, setFormSubmitState] = useState();
 
