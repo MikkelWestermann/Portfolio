@@ -5,6 +5,7 @@ import { Form, Button, Icon, Input, Select } from 'antd';
 import Section from '../Section';
 
 import './styles.scss'
+import { useLaxElement } from 'use-lax';
 
 const Contact = ( { form } ) => {
   // const meImage = useLaxElement();
@@ -12,6 +13,9 @@ const Contact = ( { form } ) => {
   const [formSubmitState, setFormSubmitState] = useState();
 
   const { getFieldDecorator } = form;
+
+  const largeContactBubble = useLaxElement()
+  const smallContactBubble = useLaxElement()
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -56,6 +60,8 @@ const Contact = ( { form } ) => {
 
   return (
     <Section title='Contact' id='contact'>
+      <div className='contact-form-bubble-large' ref={largeContactBubble} data-lax-preset="leftToRight-.1" />
+      <div className='contact-form-bubble-small' ref={smallContactBubble} data-lax-preset="rightToLeft-.15" />
       <Form className='contact-form' onSubmit={handleSubmit}>
       <Form.Item>
           {getFieldDecorator('name', {
