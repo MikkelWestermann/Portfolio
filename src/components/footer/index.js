@@ -19,7 +19,7 @@ const Footer = props => {
         <Title style={{color: '#eee'}} level={3}>Contact</Title>
         <div id='footer-content'>
           <div id='footer-contact-info'>
-            <p>mikkel.westermann.98@gmail.com</p>
+            <p><a href='mailto:hi@mikkelwestermann.com'>hi@mikkelwestermann.com</a></p>
             <p><a href='/#contact'>Contact Section</a></p>
             <p>You can also send me a message on one of the social channels on the right <Icon type="arrow-right" /></p>
           </div>
