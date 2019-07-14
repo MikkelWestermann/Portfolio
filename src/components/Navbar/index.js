@@ -45,7 +45,7 @@ const Navbar = () => {
   return (
       <nav className={`menuBar ${scroll && scroll.top > 50 ? 'scrolled-menubar' : ''}`}>
         <div className="logo">
-          <Link to='/'><span>{'<Home />'}</span></Link>
+          <Link onClick={() => window.scrollTo(0,0)} to='/'><span>{'<Home />'}</span></Link>
         </div>
         <div className="menuCon">
           <div className="rightMenu">
