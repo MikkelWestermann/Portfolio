@@ -9,7 +9,7 @@ import './styles.scss';
 
 const { Title, Paragraph } = Typography;
 
-const Project = ({ app }) => {
+const Game = ({ app }) => {
   return (
     <div className='project'>
       <div className='project-background' style={{backgroundImage: `url(https://andiscle.sirv.com/Portfolio/${app.id}/${app.background}?w=300&h=300)`}}>
@@ -17,25 +17,25 @@ const Project = ({ app }) => {
       </div>
       <div className='project-info'>
         <Title level={2}>{ app.name }</Title>
-        <Paragraph>This is short description</Paragraph>
+        <Paragraph>{ app.description }</Paragraph>
         <Title level={4}>Download</Title>
       </div>
     </div>
   )
 }
 
-const Projects = props => {
+const Games = props => {
   return (
     <SubPage 
-      title='Projects'
+      title='Games'
     >
       {
         data.map(app => (
-          <Project app={app} key={app.id} />
+          <Game app={app} key={app.id} />
         ))
       }
     </SubPage>
   )
 }
 
-export default Projects
+export default Games

@@ -7,7 +7,7 @@ import './App.scss';
 
 // Routes
 import Landing from './components/landing';
-import Projects from './components/projects';
+import Games from './components/games';
 
 
 const App = () => {
@@ -19,7 +19,7 @@ const App = () => {
       <Router>
         <Navbar scroll={false} />
           <Switch>
-            <Route exact path='/projects' component={Projects} />
+            <Route exact path='/games' component={Games} />
             <Route exact path='/' component={Landing} /> 
           </Switch>
         <Footer />

@@ -10,7 +10,7 @@ const MenuComponent = ({ sidebar }) => {
   return (
     <Menu mode={sidebar ? 'vertical' : 'horizontal'}>
       <Menu.Item key="projects">
-        <Link onClick={() => window.scrollTo(0,0)}  to='/projects'>Projects</Link>
+        <Link onClick={() => window.scrollTo(0,0)}  to='/games'>Games</Link>
         <div className='nav-background-circle' />
       </Menu.Item>
       <SubMenu title={<div><span>Demos</span><div className='nav-background-circle' /></div>}>
