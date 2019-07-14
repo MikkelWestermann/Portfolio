@@ -2,18 +2,15 @@ import React, { useState } from 'react';
 import { Form, Button, Icon, Input, Select } from 'antd';
 
 import Section from '../Section';
+import FormWrapper from '../form-wrapper';
 
 import './styles.scss'
-import { useLaxElement } from 'use-lax';
 
 const Contact = ( { form } ) => {
 
   const [formSubmitState, setFormSubmitState] = useState();
 
   const { getFieldDecorator } = form;
-
-  const largeContactBubble = useLaxElement()
-  const smallContactBubble = useLaxElement()
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -58,64 +55,64 @@ const Contact = ( { form } ) => {
 
   return (
     <Section title='Contact' id='contact'>
-      <div className='contact-form-bubble-large' ref={largeContactBubble} data-lax-preset="leftToRight-.1" />
-      <div className='contact-form-bubble-small' ref={smallContactBubble} data-lax-preset="rightToLeft-.15" />
-      <Form className='contact-form' onSubmit={handleSubmit}>
-      <Form.Item>
-          {getFieldDecorator('name', {
-            rules: [{ required: true, message: 'Please input your name!' }],
-          })(
-            <Input
-              prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
-              placeholder="Name"
-            />,
-          )}
-        </Form.Item>
+      <FormWrapper>
+        <Form className='contact-form' onSubmit={handleSubmit}>
         <Form.Item>
-          {getFieldDecorator('email', {
-            rules: [{ required: true, message: 'Please input your Email!' }],
-          })(
-            <Input
-              prefix={<Icon type="mail" style={{ color: 'rgba(0,0,0,.25)' }} />}
-              type="email"
-              placeholder="Email"
-            />,
-          )}
-        </Form.Item>
-        <Form.Item>
-          {
-            getFieldDecorator('about', {
-              rules: [{ required: true, message: 'Please choose what this is about', enum: ['Bug', 'Hire', 'Project', 'Other'] }]
+            {getFieldDecorator('name', {
+              rules: [{ required: true, message: 'Please input your name!' }],
             })(
-              <Select 
-                prefix={<Icon type="select" style={{ color: 'rgba(0,0,0,0.25)' }} />}
-                placeholder='About'
-              >
-                <Select.Option value='Bug'>Bug in a game</Select.Option>
-                <Select.Option value='Hire'>Hire</Select.Option>
-                <Select.Option value='Project'>Project</Select.Option>
-                <Select.Option value='Other'>Other</Select.Option>
-              </Select>
-            )
-          }
-        </Form.Item>
-        <Form.Item>
-          {
-            getFieldDecorator('message', {
-              rules: [{ required: true, message: 'You have to say something...' }]
+              <Input
+                prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
+                placeholder="Name"
+              />,
+            )}
+          </Form.Item>
+          <Form.Item>
+            {getFieldDecorator('email', {
+              rules: [{ required: true, message: 'Please input your Email!' }],
             })(
-              <Input.TextArea placeholder='Write me a message' autosize={{ minRows: 5 }} />
-            )
-          }
-        </Form.Item>
-        <Form.Item>
-          <Button size='large' type="primary" htmlType="submit" className="contact-form-button custom-button-hover" disabled={formSubmitState && formSubmitState.status < 400}>
-            Submit { submitButtonIcon() }
-          </Button>
-        </Form.Item>
-        <p className={`contact-submission-confirmation ${formSubmitState && formSubmitState.status < 400 ? 'contact-submission-confirmation-show' : ''}`}>You will receive an email when I have received your message to confirm your submission</p>
-        <p className={`contact-submission-confirmation ${formSubmitState && formSubmitState.status > 400 ? 'contact-submission-confirmation-fail' : ''}`}>Something went wrong... Are you sure you have filled the form correctly? Otherwise contact me <a href='mailto:mikkel.westermann.98@gmail.com'>here</a></p>
-      </Form>
+              <Input
+                prefix={<Icon type="mail" style={{ color: 'rgba(0,0,0,.25)' }} />}
+                type="email"
+                placeholder="Email"
+              />,
+            )}
+          </Form.Item>
+          <Form.Item>
+            {
+              getFieldDecorator('about', {
+                rules: [{ required: true, message: 'Please choose what this is about', enum: ['Bug', 'Hire', 'Project', 'Other'] }]
+              })(
+                <Select 
+                  prefix={<Icon type="select" style={{ color: 'rgba(0,0,0,0.25)' }} />}
+                  placeholder='About'
+                >
+                  <Select.Option value='Bug'>Bug in a game</Select.Option>
+                  <Select.Option value='Hire'>Hire</Select.Option>
+                  <Select.Option value='Project'>Project</Select.Option>
+                  <Select.Option value='Other'>Other</Select.Option>
+                </Select>
+              )
+            }
+          </Form.Item>
+          <Form.Item>
+            {
+              getFieldDecorator('message', {
+                rules: [{ required: true, message: 'You have to say something...' }]
+              })(
+                <Input.TextArea placeholder='Write me a message' autosize={{ minRows: 5 }} />
+              )
+            }
+          </Form.Item>
+          <Form.Item>
+            <Button size='large' type="primary" htmlType="submit" className="contact-form-button custom-button-hover" disabled={formSubmitState && formSubmitState.status < 400}>
+              Submit { submitButtonIcon() }
+            </Button>
+          </Form.Item>
+          <p className={`contact-submission-confirmation ${formSubmitState && formSubmitState.status < 400 ? 'contact-submission-confirmation-show' : ''}`}>You will receive an email when I have received your message to confirm your submission</p>
+          <p className={`contact-submission-confirmation ${formSubmitState && formSubmitState.status > 400 ? 'contact-submission-confirmation-fail' : ''}`}>Something went wrong... Are you sure you have filled the form correctly? Otherwise contact me <a href='mailto:mikkel.westermann.98@gmail.com'>here</a></p>
+        </Form>
+      </FormWrapper>
     </Section>
   );
 }

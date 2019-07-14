@@ -4,7 +4,7 @@
     padding: 25px;
     min-height: 500px; 
     max-width: 500px;
-    margin: 75px auto;
+    margin: auto;
     border-radius: 10px;
     -webkit-box-shadow: 0px 0px 15px 0px rgba(25,41,55,0.25);
     -moz-box-shadow: 0px 0px 15px 0px rgba(25,41,55,0.25);
@@ -49,36 +49,6 @@
       transform: scale(1, 1)
     }
 
-  }
-  .contact-form-bubble-large {
-    position: absolute; 
-    background-color: #009688; 
-    height: 30vw; 
-    width: 30vw;
-    border-radius: 100%;
-    min-width: 400px;
-    max-width: 600px;
-    min-height: 400px;
-    max-height: 600px;
-  }
-  .contact-form-bubble-small {
-    position: absolute; 
-    background-color: rgba(1,181,164,1); 
-    height: 20vw; 
-    width: 20vw;
-    min-width: 250px;
-    max-width: 400px;
-    min-height: 250px;
-    max-height: 400px;
-    border-radius: 100%;
-    right: 25vw;
-    bottom: 5vw;
-  }
-
-  @media screen and (max-width: 768px) {
-    .contact-form-bubble-small, .contact-form-bubble-large {
-      display: none;
-    }
   }
 }
 
