@@ -4,6 +4,7 @@ export const data = [
     name: "Alien Aircraft",
     icon: "AlienAircraft_icon.png",
     background: "AA_MilkyWay_portfolio_bg.png",
+    description: "You're an alien flying through an asteroid field",
     appURL: "https://itunes.apple.com/us/app/alien-aircraft/id1029056111?mt=8",
     playURL: "https://play.google.com/store/apps/details?id=com.MikkelWestermann.AlienAircraft"
   },
@@ -12,6 +13,7 @@ export const data = [
     name: "Knuckleball",
     icon: "Knuckleball_icon_2.png",
     background: "Knuckleball_portfolio_bg.png",
+    description: "Check your knuckleball tekkers",
     appURL: "https://itunes.apple.com/us/app/knuckleball/id1269290959?mt=8",
     playURL: "https://play.google.com/store/apps/details?id=com.MikkelWestermann.Knuckleball"
   },
@@ -20,6 +22,7 @@ export const data = [
     name: "Rocks & Rollin'",
     icon: "R&R_AppIcon1.png",
     background: "CloudyCrown_Midday_Right.png",
+    description: "A rolling ball in the woods",
     appURL: "https://itunes.apple.com/us/app/rocks-rollin/id1331604471?mt=8",
     playURL: "https://play.google.com/store/apps/details?id=com.MikkelWestermann.RocksAndRollin"
   },
@@ -28,6 +31,7 @@ export const data = [
     name: "Radii",
     icon: "Radii_icon.png",
     background: "Radii_portfolio_bg.png",
+    description: "White dot with a finite jumping radius",
     appURL: "https://itunes.apple.com/us/app/radii/id1436695795?ls=1&mt=8",
     playURL: "https://play.google.com/store/apps/details?id=com.MikkelWestermann.Radii"
   },
@@ -36,6 +40,7 @@ export const data = [
     name: "Subpixel",
     icon: "Subpixel_icon.png",
     background: "Subpixel_portfolio_bg.png",
+    description: "Match the color of the particle with the color of the subpixel",
     appURL: "https://itunes.apple.com/us/app/subpixel/id1441796951?ls=1&mt=8",
     playURL: "https://play.google.com/store/apps/details?id=com.MikkelWestermann.Subpixel"
   },
@@ -44,6 +49,7 @@ export const data = [
     name: "Split The Droplet",
     icon: "Split_icon.png",
     background: "SplitTheDroplet_portfolio_bg.png",
+    description: "Split and merge to avoid the obstacles",
     appURL: "https://itunes.apple.com/us/app/split-the-droplet/id1441917594?ls=1&mt=8",
     playURL: "https://play.google.com/store/apps/details?id=com.MikkelWestermann.SplitTheDroplet"
   },
@@ -52,6 +58,7 @@ export const data = [
     name: "Planet Pentagon",
     icon: "PlanetPentagon_icon.png",
     background: "PlanetPentagon_portfolio_bg.png",
+    description: "Asteroid attack on Planet Pentagon",
     appURL: "https://itunes.apple.com/us/app/planet-pentagon/id1441793475?ls=1&mt=8",
     playURL: "https://play.google.com/store/apps/details?id=com.MikkelWestermann.PlanetPentagon"
   },
@@ -60,6 +67,7 @@ export const data = [
     name: "Third Line",
     icon: "ThirdLine_icon.png",
     background: "ThirdLine_portfolio_bg.png",
+    description: "Avoid the obstacles",
     appURL: "https://itunes.apple.com/us/app/third-line/id1441792562?ls=1&mt=8",
     playURL: "https://play.google.com/store/apps/details?id=com.MikkelWestermann.ThirdLine"
   },
@@ -68,6 +76,7 @@ export const data = [
     name: "Kolor Bird",
     icon: "ColorBird_icon.png",
     background: "KolorBird_portfolio_bg.png",
+    description: "Bird changing colors flying through colorful obstacles",
     appURL: "https://itunes.apple.com/us/app/kolor-bird/id1441794902?mt=8",
     playURL: "https://play.google.com/store/apps/details?id=com.MikkelWestermann.KolorBird"
   },
@@ -76,6 +85,7 @@ export const data = [
     name: "Slide to Side",
     icon: "SlideToSide_icon.png",
     background: "SlideToSide_portfolio_bg.png",
+    description: "Avoid the obstacles by moving in a zigzag pattern.",
     appURL: "https://itunes.apple.com/us/app/slide-to-side/id1441793975?ls=1&mt=8",
     playURL: "https://play.google.com/store/apps/details?id=com.MikkelWestermann.SlideToSide"
   },
@@ -84,6 +94,7 @@ export const data = [
     name: "Proper Path",
     icon: "Path_icon.png",
     background: "ProperPath_portfolio_bg.png",
+    description: "You have to follow the path, without touching the lines.",
     appURL: "https://itunes.apple.com/us/app/proper-path/id1441917529?ls=1&mt=8",
     playURL: "https://play.google.com/store/apps/details?id=com.MikkelWestermann.ProperPath"
   },
@@ -92,6 +103,7 @@ export const data = [
     name: "Suber Dash",
     icon: "SuperDash_icon.png",
     background: "SuperDash_portfolio_bg.png",
+    description: "Avoid obstacles by dashing past them",
     appURL: "https://itunes.apple.com/us/app/suber-dash/id1441796436?ls=1&mt=8",
     playURL: "https://play.google.com/store/apps/details?id=com.MikkelWestermann.SuberDash"
   },
@@ -100,6 +112,7 @@ export const data = [
     name: "Hyper Highway",
     icon: "HyperHighway_icon.png",
     background: "HyperHighway_portfolio_bg.png",
+    description: "You're driving along dodging coloured squares.",
     appURL: "https://itunes.apple.com/us/app/hyper-highway/id1443425636?ls=1&mt=8",
     playURL: "https://play.google.com/store/apps/details?id=com.MikkelWestermann.HyperHighway"
   }
