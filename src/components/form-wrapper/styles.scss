@@ -1,0 +1,35 @@
+.form-wrapper {
+  margin: 50px auto;
+  position: relative;
+  .contact-form-bubble-large {
+    position: absolute; 
+    background-color: #009688; 
+    height: 30vw; 
+    width: 30vw;
+    border-radius: 100%;
+    min-width: 450px;
+    max-width: 600px;
+    min-height: 450px;
+    max-height: 600px;
+    top: -2.5vh;
+  }
+  .contact-form-bubble-small {
+    position: absolute; 
+    background-color: rgba(1,181,164,1); 
+    height: 20vw; 
+    width: 20vw;
+    min-width: 300px;
+    max-width: 400px;
+    min-height: 300px;
+    max-height: 400px;
+    border-radius: 100%;
+    right: 0;
+    bottom: -2.5vh;
+  }
+
+  @media screen and (max-width: 768px) {
+    .contact-form-bubble-small, .contact-form-bubble-large {
+      display: none;
+    }
+  }
+}
