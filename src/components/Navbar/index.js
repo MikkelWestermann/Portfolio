@@ -61,7 +61,7 @@ const Navbar = () => {
             onClose={onClose}
             visible={visible}
           >
-            <Menu sidebar={true} />
+            <Menu sidebar={true}  onClose={onClose} />
           </Drawer>
         </div>
         <Modal
