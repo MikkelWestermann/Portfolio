@@ -18,7 +18,7 @@ const About = () => {
       <div id='about-me-image'>
         <div id='me-image-group'>
           <div ref={meBackgroundBubble} id='me-image-background-bubble' data-lax-preset="leftToRight-.02" />
-          <img id='me-image' src="https://andiscle.sirv.com/Portfolio/Profile/profile.jpg?cy=15%25&ch=1960" width="1960" height="1960" alt="me" />
+          <img id='me-image' src="https://andiscle.sirv.com/Portfolio/Profile/profile.jpg?cy=15%25&cw=200&ch=200&w=200" width="200" height="200" srcset="https://andiscle.sirv.com/Portfolio/Profile/profile.jpg?cy=15%25&cw=200&ch=200&w=200 1x, https://andiscle.sirv.com/Portfolio/Profile/profile.jpg?cy=15%25&cw=400&ch=400&w=400 2x" alt="me" />
           <div ref={meSmallBubble} id='me-image-foreground-bubble' data-lax-preset="rightToLeft-.05" />
         </div>
         <div id='me-arrow' ref={meArrow} data-lax-preset='fadeIn rightToLeft-.2'><Icon type="arrow-left" /> That's me</div>
