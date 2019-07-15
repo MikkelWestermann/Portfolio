@@ -38,12 +38,11 @@
 
         #footer-social-buttons {
           i {
-            transition: 0.15s linear all;
             cursor: pointer;
           }
           i:hover {
             color: #009688;
-            transform: scale(1.2);
+            animation: footer-social-hover 0.75s ease-in-out;
           }
         }
       }
@@ -72,5 +71,24 @@
     border-radius: 100%;
     right: 5vw;
     top: 0;
+  }
+
+  @keyframes footer-social-hover {
+    0% {
+      transform: rotateX(0deg)
+    }
+    25% {
+      transform: rotateZ(20deg)
+    }
+    50% {
+      transform: rotateZ(-15deg)
+    }
+    75% {
+      transform: rotateZ(10deg)
+    }
+    100% {
+      transform: rotateZ(0deg)
+    }
+
   }
 }
