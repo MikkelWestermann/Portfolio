@@ -32,6 +32,7 @@ const Footer = props => {
             </div>
           </div>
         </div>
+        <p className='copyright'>Mikkel Theiss Westermann &copy; {new Date().getFullYear()}</p>
       </Container>
     </div>
   )

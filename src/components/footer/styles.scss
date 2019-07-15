@@ -20,6 +20,7 @@
       display: flex;
       justify-content: space-around;
       align-items: flex-end;
+      z-index: 50;
 
       #footer-contact-info {
         width: 50%;
@@ -71,6 +72,13 @@
     border-radius: 100%;
     right: 5vw;
     top: 0;
+  }
+
+  .copyright {
+    opacity: 0.5;
+    width: 100%; 
+    text-align: center;
+    margin-top: 15px;
   }
 
   @keyframes footer-social-hover {
