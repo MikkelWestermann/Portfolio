@@ -4,6 +4,8 @@ import { Form, Button, Icon, Input, Select } from 'antd';
 import Section from '../Section';
 import FormWrapper from '../form-wrapper';
 
+import config from '../../config';
+
 import './styles.scss'
 
 const Contact = ( { form } ) => {
@@ -20,7 +22,7 @@ const Contact = ( { form } ) => {
       if (!err) {
         setFormSubmitState({ isFetching: true })
         
-        fetch('http://localhost:5555/', {
+        fetch(config.getEmailAuto(), {
           method: 'POST',
           headers: {
             'Access-Control-Allow-Origin': '*',
@@ -56,7 +58,7 @@ const Contact = ( { form } ) => {
   return (
     <Section title='Contact' id='contact'>
       <FormWrapper>
-        <Form className='contact-form' onSubmit={handleSubmit}>
+        <Form className='custom-form' onSubmit={handleSubmit}>
         <Form.Item>
             {getFieldDecorator('name', {
               rules: [{ required: true, message: 'Please input your name!' }],
@@ -105,12 +107,12 @@ const Contact = ( { form } ) => {
             }
           </Form.Item>
           <Form.Item>
-            <Button size='large' type="primary" htmlType="submit" className="contact-form-button custom-button-hover" disabled={formSubmitState && formSubmitState.status < 400}>
+            <Button size='large' type="primary" htmlType="submit" className="custom-form-button custom-button-hover" disabled={formSubmitState && formSubmitState.status < 400}>
               Submit { submitButtonIcon() }
             </Button>
           </Form.Item>
-          <p className={`contact-submission-confirmation ${formSubmitState && formSubmitState.status < 400 ? 'contact-submission-confirmation-show' : ''}`}>You will receive an email when I have received your message to confirm your submission</p>
-          <p className={`contact-submission-confirmation ${formSubmitState && formSubmitState.status > 400 ? 'contact-submission-confirmation-fail' : ''}`}>Something went wrong... Are you sure you have filled the form correctly? Otherwise contact me <a href='mailto:mikkel.westermann.98@gmail.com'>here</a></p>
+          <p className={`custom-submission-confirmation ${formSubmitState && formSubmitState.status < 400 ? 'custom-submission-confirmation-show' : ''}`}>You will receive an email when I have received your message to confirm your submission</p>
+          <p className={`custom-submission-confirmation ${formSubmitState && formSubmitState.status > 400 ? 'custom-submission-confirmation-fail' : ''}`}>Something went wrong... Are you sure you have filled the form correctly? Otherwise contact me <a href='mailto:mikkel.westermann.98@gmail.com'>here</a></p>
         </Form>
       </FormWrapper>
     </Section>
