@@ -8,6 +8,7 @@ import './App.scss';
 // Routes
 import Landing from './components/landing';
 import Games from './components/games';
+import UrlShortenerPage from './components/url-shortener-page';
 
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
       <Router>
         <Navbar scroll={false} />
           <Switch>
+            <Route exact path='/demos/url-shortener' component={UrlShortenerPage} />
             <Route exact path='/games' component={Games} />
             <Route exact path='/' component={Landing} /> 
           </Switch>
