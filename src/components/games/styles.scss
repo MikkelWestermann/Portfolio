@@ -33,6 +33,36 @@
     align-items: center;
     width: 60%;
 
+    .download {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .storeLinkApple {
+        height: 75px;
+        width: auto;
+        // Adjust for margin on google play logo
+        margin: calc(35px / 2) 0;
+      }
+      
+      .storeLinkGoogle {
+        height: 110px;
+        width: auto;
+      }
+         
+      @media only screen and (max-width: 992px) {
+        .storeLinkApple {
+          height: 50px;
+          // Adjust for margin on google play logo
+          margin: calc(25px / 2) 0;
+        }
+        
+        .storeLinkGoogle {
+          height: 75px;
+        } 
+      }
+    }
+
     @media only screen and (max-width: 992px) {
       width: 50%;
     }
