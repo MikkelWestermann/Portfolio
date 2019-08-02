@@ -3,6 +3,10 @@ import { Typography } from 'antd';
 import SubPage from '../sub-page';
 import { data } from '../../Data/AppData';
 
+// store grapics
+import appstore from '../../media/appstore.svg';
+import googleplay from '../../media/googleplay.png';
+
 import './styles.scss';
 
 
@@ -19,6 +23,10 @@ const Game = ({ app }) => {
         <Title level={2}>{ app.name }</Title>
         <Paragraph>{ app.description }</Paragraph>
         <Title level={4}>Download</Title>
+        <div className="download">
+          <a href={ app.appURL }><img src={ appstore } alt='app store' className='storeLinkApple'/></a>
+          <a href={ app.playURL }><img src={ googleplay } alt='google play' className='storeLinkGoogle'/></a>
+        </div>
       </div>
     </div>
   )
