@@ -9,14 +9,14 @@ const MenuItemGroup = Menu.ItemGroup;
 const MenuComponent = ({ sidebar, onClose }) => {
   return (
     <Menu mode={sidebar ? 'vertical' : 'horizontal'}>
-      <Menu.Item key="projects">
-        <Link onClick={() => { window.scrollTo(0,0); onClose() }}  to='/games'>Games</Link>
+      <Menu.Item key="projects" >
+        <Link to='/games' onClick={() => { window.scrollTo(0,0); if (onClose) {onClose()} }} >Games</Link>
         <div className='nav-background-circle' />
       </Menu.Item>
       <SubMenu title={<div><span>Demos</span><div className='nav-background-circle' /></div>}>
         <MenuItemGroup title="Backend">
-          <Menu.Item key="url-shortener"><Link onClick={() => { window.scrollTo(0,0); onClose() }} to='/demos/url-shortener'>Url Shortener</Link></Menu.Item>
-          <Menu.Item key="email-scheduler"><Link onClick={() => { window.scrollTo(0,0); onClose() }} to='/demos/email-scheduler'>Email Scheduler</Link></Menu.Item>
+          <Menu.Item key="url-shortener"><Link onClick={() => { window.scrollTo(0,0); if (onClose) {onClose()} }} to='/demos/url-shortener'>Url Shortener</Link></Menu.Item>
+          <Menu.Item key="email-scheduler"><Link onClick={() => { window.scrollTo(0,0); if (onClose) {onClose()} }} to='/demos/email-scheduler'>Email Scheduler</Link></Menu.Item>
         </MenuItemGroup>
         <div className='nav-background-circle' />
       </SubMenu>
