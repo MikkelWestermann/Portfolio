@@ -9,6 +9,7 @@ import './App.scss';
 import Landing from './components/landing';
 import Games from './components/games';
 import UrlShortenerPage from './components/url-shortener-page';
+import EmailSchedulerPage from './components/email-scheduler-page';
 
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
       <Router>
         <Navbar scroll={false} />
           <Switch>
+            <Route exact path='/demos/email-scheduler' component={EmailSchedulerPage} />
             <Route exact path='/demos/url-shortener' component={UrlShortenerPage} />
             <Route exact path='/games' component={Games} />
             <Route exact path='/' component={Landing} /> 
