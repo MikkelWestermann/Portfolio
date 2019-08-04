@@ -41,6 +41,17 @@
   }
 }
 
+.ant-menu-submenu .demos {
+  .demo-link {
+    opacity: 0.75 !important;
+    color: #192937 !important;
+  }
+  .demo-link:hover {
+    opacity: 1 !important;
+    color: #009688 !important;
+  }
+}
+
 .ant-menu-item, .ant-menu-submenu-horizontal {
   border-bottom: none !important;
   position: relative;
