@@ -32,7 +32,9 @@ const Contact = ( { form } ) => {
             email: 'hi@mikkelwestermann.com',
             date: scheduledDate,
             data: {
-              subject: `email from ${values.name} about ${values.about}`
+              subject: `${values.name} has contacted you about ${values.about}`,
+              message: values.message,
+              title: 'Contact Form'
             }
           })
         })
