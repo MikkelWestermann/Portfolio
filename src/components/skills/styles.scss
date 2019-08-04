@@ -7,15 +7,17 @@
 
   .skills-code-wrapper {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin: 50px 0; 
     .skills-code-image {
       height: 400px;
       width: 400px; 
       background-color: red;
     }
-  }
-  .skills-code-right {
-    justify-content: flex-end;
+    .skills-code-text {
+      width: 50%;
+    }
   }
 
 }
