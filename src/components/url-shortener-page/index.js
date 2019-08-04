@@ -78,7 +78,7 @@ const UrlShortenerPage = ({ form }) => {
               getValueFromEvent: e => {
                 const convertedValue = Number(e.currentTarget.value);
                 if (isNaN(convertedValue)) {
-                  return Number(this.props.form.getFieldValue("testNumber"));
+                  return Number(this.props.form.getFieldValue("duration"));
                 } else {
                   return convertedValue;
                 }
