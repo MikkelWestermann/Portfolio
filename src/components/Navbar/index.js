@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Menu from './menu'
-import { Drawer, Button, Icon, Modal } from 'antd';
+import { Drawer, Button, Icon, Modal, Checkbox } from 'antd';
 import { Link } from 'react-router-dom';
 
 import { 
@@ -45,7 +45,7 @@ const Navbar = () => {
   return (
       <nav className={`menuBar ${scroll && scroll.top > 50 ? 'scrolled-menubar' : ''}`}>
         <div className="logo">
-          <Link to='/'><span>{'<Home />'}</span></Link>
+          <Link onClick={() => window.scrollTo(0,0)} to='/'><span>{'<Home />'}</span></Link>
         </div>
         <div className="menuCon">
           <div className="rightMenu">
@@ -61,17 +61,18 @@ const Navbar = () => {
             onClose={onClose}
             visible={visible}
           >
-            <Menu sidebar={true} />
+            <Menu sidebar={true}  onClose={onClose} />
           </Drawer>
         </div>
         <Modal
           title='Testing responseiveness?'
-          visible={responsivenessCheck}
+          visible={responsivenessCheck && localStorage.getItem('doNotShowResponsivenessCheck') !== 'true'}
           onCancel={() => setResponsivenessCheck(false)}
           footer={false}
         >
           <p>Cool! You might have to reload the page to get all the awesome (<a href='https://github.com/alexfoxy/laxxx'>Lax.js</a>) scroll animations, though. They behave based on the initial viewport size</p>
           <Button block type='primary' onClick={() => window.location.reload()}>Reload <Icon type="reload" /></Button>
+          <Checkbox style={{ marginTop: 25 }} onChange={e => localStorage.setItem('doNotShowResponsivenessCheck', e.target.checked)} >Don't show again</Checkbox>
         </Modal>
       </nav>
     );

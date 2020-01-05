@@ -1,6 +1,6 @@
 import React, { Component } from 'react'; 
 
-import { /* Button */ Typography, /* Icon */ } from 'antd';
+import { Button, Typography, Icon } from 'antd';
 
 import { 
   watchViewport, 
@@ -8,9 +8,9 @@ import {
 } from 'tornis';
 
 // Landing page sectional components
-// import About from '../about';
-// import Skills from '../skills';
-// import Contact from '../contact';
+import About from '../about';
+import Skills from '../skills';
+import Contact from '../contact';
 
 // import p5 wrapper for background sketch
 import P5Wrapper from 'react-p5-wrapper';
@@ -67,7 +67,7 @@ class Landing extends Component {
     let isResized = false;
 
     const drawFrame = () => {
-      p.background(24, 40, 54);
+      p.background(25, 41, 55);
           phase = p.frameCount * speed;
           
           for(let strand = 0; strand < numStrands; strand++) {
@@ -151,11 +151,9 @@ class Landing extends Component {
             }
           </div>
           <div id='landing-anim-actions'>
-            <div style={{fontSize: '1.5em', color: '#eee'}}>
-              {/* <Button icon="download" size='large' className='download-resume custom-button-hover'>Download My Resume</Button>
-              <Button type='primary' size='large' className='view-my-work custom-button-hover' onClick={() => window.scroll({ top: windowSize.y, left: 0, behavior: 'smooth' })}>View My Work <Icon type="right" /></Button> */}
-              <p>Portfolio</p>
-              <p><strong>Coming Soon...</strong></p>
+            <div>
+              <Button icon="download" size='large' className='download-resume custom-button-hover'>Download My Resume</Button>
+              <Button type='primary' size='large' className='view-my-work custom-button-hover' onClick={() => window.scroll({ top: windowSize.y, left: 0, behavior: 'smooth' })}>View My Work <Icon type="right" /></Button>
             </div>
             {
               !pauseAnim ?
@@ -164,9 +162,9 @@ class Landing extends Component {
             }
           </div>
         </div>
-        {/* <About />
+        <About />
         <Skills />
-        <Contact /> */}
+        <Contact />
       </div>
     )
   }
