@@ -13,14 +13,11 @@ import { Divider, Typography } from 'antd';
 import './styles.scss'
 
 const Skills = () => {
-  const javascriptImage = useLaxElement();
-  const cSharpImage = useLaxElement();
-  const pythonImage = useLaxElement();
   const { Title, Paragraph, Text } = Typography;
   return (
     <Section title='Skills' id='skills-section'>
       <div className='skills-code-wrapper'>
-        <div ref={javascriptImage} data-lax-preset='fadeIn' className='skills-code-image' />
+        {/* <div ref={javascriptImage} data-lax-preset='fadeIn' className='skills-code-image' /> */}
         <div className='skills-code-text'>
           <Text><strong>JavaScript</strong> is my main langauge and the one I use on a daily basis. I have been programming in JavaScript for about {moment.duration(moment().diff(moment('2018-01-01'))).years()} year and {moment.duration(moment().diff(moment('2018-01-01'))).months()} month(s). I started learning the langauge of the web because of the rapid development and expansion of web technologies, of which JavaScript is core. I use JavaScript for full-stack, meaning I write a lot of React and Node.</Text>
         </div>
@@ -30,11 +27,11 @@ const Skills = () => {
         <div className='skills-code-text'>
           <Text><strong>C#</strong> was the first language that I wrote full programs in. I have only used C# in conjunction with Unity3D, which all of my <Link to='/games'>games</Link> are written in. I started using it back in 2014-2015ish and have been using it sporadically ever since.</Text>
         </div>
-        <div ref={cSharpImage} data-lax-preset='fadeIn' className='skills-code-image' />
+        {/* <div ref={cSharpImage} data-lax-preset='fadeIn' className='skills-code-image' /> */}
       </div>
       <Divider orientation="right">C#</Divider>
       <div className='skills-code-wrapper'>
-        <div ref={pythonImage} data-lax-preset='fadeIn' className='skills-code-image' />
+        {/* <div ref={pythonImage} data-lax-preset='fadeIn' className='skills-code-image' /> */}
         <div className='skills-code-text'>
           <Text><strong>Python</strong> is one of my newest acquisitions of programming languages, but one of my favorites. I initially learned Python because it's the defacto standard in Artificial Intelligence and Machine Learning (well, that and R) and you know, those are pretty interesting topics. I have since then used it for small backends with flask and I continue to use it in my pursuit of knowledge in AI and ML.</Text>
         </div>

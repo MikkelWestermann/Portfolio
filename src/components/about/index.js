@@ -26,10 +26,6 @@ const About = () => {
           <Paragraph>
             <Text strong>Hi! And welcome to my portfolio / playground.</Text> This is a website for showcasing my work, and for me to try out awesome new (or new to me) technologies like serverless architecture and React Hooks.
           </Paragraph>
-
-          <Title level={3}>Tech Stack</Title>
-          
-
         </Typography>
       </Container>
     </Section>
